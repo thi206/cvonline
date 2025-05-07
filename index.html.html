@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+/* Aplica rolagem suave para navegação por âncoras */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estiliza o corpo da página com fonte, fundo gradiente e cor de texto */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f8fb, #eef2f6); 
+  color: rgb(10, 38, 71); 
+}
+
+/* Cabeçalho fixo no topo com sombra leve para separação visual */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); 
+  z-index: 1000; 
+}
+
+/* Container da navbar com centralização e alinhamento à direita */
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+}
+
+/* Links da navbar com cor base e espaçamento entre eles */
+.navbar a {
+  color: rgb(10, 38, 71);
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Cor muda ao passar o mouse nos links */
+.navbar a:hover {
+  color: rgb(32, 82, 149);
+}
+
+/* Espaço vazio para compensar o cabeçalho fixo */
+.spacer {
+  height: 80px;
+}
+
+/* Seção hero principal com layout em linha, borda e fundo gradiente */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #009cff3b;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f5f8fb, #eef2f6);
+}
+
+/* Container de botões empilhados na seção hero */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Botão principal com fundo escuro, texto branco e design arredondado */
+.btn-primary {
+  background-color: rgb(10, 38, 71);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  cursor: pointer;
+  text-decoration: none; 
+}
+
+/* Botão com borda azul e fundo transparente */
+.btn-outline {
+  border: 2px solid rgb(10, 38, 71);
+  color: rgb(10, 38, 71);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Estiliza imagem de perfil com formato circular e sombra leve */
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; 
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Classe geral para seções com espaçamento e centralização de texto */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Título das seções com destaque e espaçamento inferior */
+.section h2 {
+  font-size: 28px;
+  color: rgb(10, 38, 71);
+  margin-bottom: 40px;
+}
+
+/* Estilização específica para a seção "sobre" com fundo verde claro */
+#sobre {
+  background-color: #eefbf5;
+}
+
+/* Estilização da seção "Educação" com outro gradiente */
+#Educacao {
+  background: linear-gradient(135deg, #e8edf3, #f5f8fb);
+}
+
+/* Fundo branco para a seção "portfólio" */
+#portfolio {
+  background-color: #ffffff;
+}
+
+/* Caixa de conteúdo com aparência de placeholder ou conteúdo temporário */
+.placeholder-box {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 12px;
+  color: #999; 
+}
+
+/* Responsividade para dispositivos com largura até 768px */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header com links internos -->
+  <header>
+    <nav class="navbar">
+      <a href="#sobre">Sobre Mim</a>
+      <a href="#Educacao">Educação</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <div class="spacer"></div>
+
+  <!-- Seção hero -->
+  <section class="hero">
+    <div class="hero-buttons">
+      <a href="ThiagoHenriqueResume (1).pdf" class="btn-primary" download>
+        &#x2B07; Download CV
+      </a>
+      <a href="#contato" class="btn-outline">
+        Entre em Contato &#x2709;
+      </a>
+    </div>
+    <img src="imagens/20240725_202014.jpg" alt="Profile" class="profile-image" />
+  </section>
+
+  <!-- Seção sobre -->
+  <section id="sobre" class="section" style="background: linear-gradient(135deg, #f5f8fb, #eef2f6); padding: 60px 20px;">
+    <h2 style="text-align: center; margin-bottom: 40px;">Sobre mim</h2>
+    <div style="max-width: 900px; margin: 0 auto; color: #333; line-height: 1.7;">
+      <p>
+        Sou movido por curiosidade, disciplina e o desejo constante de aprender. Em diversos momentos da minha vida, mostrei a mim mesmo que, com dedicação, posso conquistar qualquer objetivo — e esse princípio carrego até hoje, tanto na vida pessoal quanto profissional.
+      </p>
+      <p>
+        Aprendi inglês de forma autodidata utilizando YouTube, séries da Netflix e músicas — e atingi um nível avançado, certificado pelo EF SET, que pode ser conferido 
+        <a href="https://cert.efset.org/SeRPce" target="_blank" style="color: #0a74da; text-decoration: underline;">aqui</a>.
+      </p>
+      <p>
+        Outro exemplo da minha dedicação pessoal foi ao aprender a tocar violão. Sempre tive vontade, e mesmo sem orientação formal, transformei esse desejo em realidade com prática consistente. Hoje, tocar virou um dos meus hobbies favoritos e uma das formas que encontrei para relaxar e manter o equilíbrio entre produtividade e bem-estar.
+      </p>
+      <p>
+        Gosto de me desafiar constantemente e acredito que o aprendizado nunca deve parar. Cada novo conhecimento, mesmo fora da área técnica, contribui para a minha visão de mundo e potencial criativo.
+      </p>
+    </div>
+  </section>
+  
+  
+
+  <!-- Seção Educação -->
+  <section id="Educacao" class="section" style="background-color: #ffffff; padding: 60px 20px;">
+    <h2 style="text-align: center; margin-bottom: 40px;">Educação</h2>
+    <div style="max-width: 900px; margin: 0 auto; color: #333; line-height: 1.7;">
+      <p>
+        Minha trajetória educacional sempre foi pautada pelo esforço. No ensino médio, mesmo sem ser o aluno mais brilhante da turma, mantive um bom desempenho graças à disciplina. Um exemplo marcante foi quando tirei 2 em uma prova de biologia e precisei tirar 10 na seguinte para evitar a recuperação — e consegui, estudando todos os dias.
+      </p>
+      <p>
+        Outro marco foi no ENEM. Sabendo que minhas redações estavam abaixo da média, me comprometi com a professora a escrever uma por semana durante todo o ano. Fiz mais de 50. No dia da prova, tirei 920 de 1000 pontos, o que me garantiu uma vaga na Universidade Federal de Viçosa (UFV).
+      </p>
+      <p>
+        Após um ano cursando Engenharia Florestal, percebi que aquele não era o caminho certo para mim. Saí da UFV sem arrependimentos e, por meio de uma necessidade familiar, descobri a área de modelagem 3D.
+      </p>
+      <p>
+        Iniciei minha trajetória profissional aos 19 anos como artista 3D, criando imagens e animações realistas para o setor imobiliário. Trabalhei durante um ano como freelancer em projetos nacionais e internacionais, até ser contratado por uma startup especializada em realidade virtual para construtoras, parceira do Banco Inter e da MRV.
+      </p>
+      <p>
+        Lá, me destaquei ao identificar e automatizar processos repetitivos, utilizando programação e inteligência artificial para aumentar a eficiência operacional. Essa experiência despertou meu interesse pela área de tecnologia e me motivou a iniciar a faculdade de Engenharia de Software.
+      </p>
+      <p>
+        Hoje, atuo no desenvolvimento de soluções automatizadas com IA e plataformas no-code para empresas. Entre os projetos que realizei, destaco:
+      </p>
+      <ul style="padding-left: 20px; margin-top: -10px; margin-bottom: 20px;">
+        <li>
+          <strong>Automação de postagens para blogs:</strong> Integração com o Make, permitindo geração de conteúdo otimizado para SEO de forma 100% automática no projeto 
+          <a href="https://cryptosphere.com.br" target="_blank" style="color: #0a74da; text-decoration: underline;">cryptosphere.com.br</a>.
+        </li>
+        <li>
+          <strong>Criação de agentes de IA personalizados:</strong> Atendentes virtuais para barbearias, empresas de ar-condicionado e concessionárias, utilizando RAG (Retrieval-Augmented Generation), engenharia de prompt e Function Calling para interações mais relevantes e eficazes.
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <!-- Seção Portfolio -->
+  <section id="portfolio" class="section" style="padding: 60px 20px; background: linear-gradient(135deg, #f5f8fb, #eef2f6);">
+    <h2 style="text-align: center; margin-bottom: 40px;">Portfolio</h2>
+    <div style="max-width: 800px; margin: 0 auto; color: #333; line-height: 1.7; text-align: center;">
+      <p>
+        Ao longo da minha trajetória, construí experiências práticas nas áreas de design 3D, programação e desenvolvimento de agentes de inteligência artificial. Reuni abaixo meus principais portfólios, que demonstram meu domínio técnico e minha capacidade de transformar ideias em soluções concretas:
+      </p>
+  
+      <p>
+        🎨 <strong>Portfólio 3D (visualização arquitetônica e experiências imersivas):</strong><br>
+        <a href="https://www.behance.net/thiagosousa21" target="_blank" style="color: #0a74da; text-decoration: underline;">
+          behance.net/thiagosousa21
+        </a>
+      </p>
+  
+      <p>
+        💻 <strong>Projetos de programação e automações com IA:</strong><br>
+        <a href="https://github.com/thi206" target="_blank" style="color: #0a74da; text-decoration: underline;">
+          github.com/thi206
+        </a>
+      </p>
+  
+      <p>
+        🤖 <strong>Demonstração em vídeo de agentes inteligentes com IA e N8N:</strong><br>
+        <a href="https://youtu.be/qxrfIkDfPLk" target="_blank" style="color: #0a74da; text-decoration: underline;">
+          youtu.be/qxrfIkDfPLk
+        </a>
+      </p>
+  
+      <p>
+        Esses trabalhos refletem minha dedicação em unir criatividade, tecnologia e eficiência para resolver problemas reais. Estou sempre aprimorando minhas habilidades e buscando novas formas de inovar com IA e automação.
+      </p>
+    </div>
+  </section>
+  
+  
+
+  <footer id="contato" class ="footer" style="background-color: #f9f9f9; padding: 60px 20px;">
+    <h2 style="text-align: center; margin-bottom: 10px;">Contato</h2>
+    <p style="text-align: center; margin-bottom: 40px;">Vamos trabalhar juntos no seu próximo projeto!</p>
+  
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: flex-start;">
+  
+      <!-- Formulário -->
+      <form style="flex: 1; min-width: 300px; background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
+        <div style="margin-bottom: 20px;">
+          <label for="nome" style="display: block; margin-bottom: 6px; font-weight: bold;">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+  
+        <div style="margin-bottom: 20px;">
+          <label for="email" style="display: block; margin-bottom: 6px; font-weight: bold;">Email</label>
+          <input type="email" id="email" name="email" placeholder="Seu endereço de email" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+  
+        <div style="margin-bottom: 20px;">
+          <label for="mensagem" style="display: block; margin-bottom: 6px; font-weight: bold;">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+        </div>
+  
+        <button type="submit" style="width: 100%; background-color: #0a2740; color: white; padding: 12px; border: none; border-radius: 6px; font-weight: bold;">
+          Enviar Mensagem
+        </button>
+      </form>
+  
+      <!-- Contato e redes sociais -->
+      <div style="flex: 1; min-width: 260px; text-align: center;">
+        
+        <!-- Ícones sociais -->
+        <div style="margin-bottom: 30px; display: flex; justify-content: center; gap: 16px;">
+          <a href="https://www.linkedin.com/in/thiago-carvalhobr/" target="_blank">
+            <img src="imagens/linkedin.png" alt="LinkedIn" width="24" height="24">
+          </a>
+          <a href="https://github.com/thi206" target="_blank">
+            <img src="imagens/github.png" alt="GitHub" width="24" height="24">
+          </a>
+          <a href="https://web.whatsapp.com" target="_blank">
+            <img src="imagens/whatsapp.png" alt="WhatsApp" width="24" height="24">
+          </a>
+          <a href="mailto:contato@example.com">
+            <img src="imagens/email.png" alt="Email" width="24" height="24">
+          </a>
+        </div>
+  
+        <!-- Dados de contato -->
+        <ul style="list-style: none; padding: 0; color: #333; font-size: 16px; text-align: left;">
+          <li style="margin-bottom: 20px; display: flex; align-items: center;">
+            <img src="imagens/email.png" alt="Email" width="20" style="margin-right: 10px;">
+            thiagoc.sousa.h@gmail.com
+          </li>
+          <li style="margin-bottom: 20px; display: flex; align-items: center;">
+            <img src="imagens/phone.png" alt="Telefone" width="20" style="margin-right: 10px;">
+            +31 995676428
+          </li>
+          <li style="display: flex; align-items: center;">
+            <img src="imagens/location.png" alt="Localização" width="20" style="margin-right: 10px;">
+            Belo horizonte, MG
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  
+
+</body>
+</html>
